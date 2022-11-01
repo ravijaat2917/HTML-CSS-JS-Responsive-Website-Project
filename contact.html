@@ -19,12 +19,12 @@
     <div class="container">
         <div class="navbar">
             <div class="logo">
-                <a href="./index.html"><img src="./Images/logo.png" width="105px" style="margin-top: 25px;"></a>
+                <img src="./Images/logo.png" width="105px" style="margin-top: 25px;">
             </div>
             <nav>
                 <ul id="MenuItems">
-                    <li><a href="./index.html" >Home</a></li>
-                    <li><a href="./products.html" >Products</a></li>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="products.html" >Products</a></li>
                     <li><a href="contact.html" >Contact</a></li>
                     <li><a href="account.html" >Account</a></li>
                 </ul>
@@ -33,37 +33,33 @@
             <img src="./Images/menu.png" class="menu-icon" onclick="menutoggle()"/>
         </div>
     </div>
-    <!-- Account page  -->
-    <div class="account-page">
-        <div class="container">
-            <div class="row">
-                <div class="col-2">
-                    <img src="./Images/image1.png" width="100%"/>
-                </div>
-                <div class="col-2">
-                    <div class="form-container">
-                        <div class="form-btn">
-                            <span onclick="login()">LogIn</span>
-                            <span onclick="register()">Register</span>
-                            <hr id="Indicator"/>
-                        </div>
-                        <form id="LoginForm">
-                            <input type="text" placeholder="Username"/>
-                            <input type="password" placeholder="Password"/>
-                            <button type="submit" class="btn">LogIn</button>
-                            <a href="">Forgot password</a>
-                        </form>
-                        <form id="RegForm">
-                            <!-- <input type="text" placeholder="Username"/>
-                            <input type="email" placeholder="Email"/>
-                            <input type="password" placeholder="Password"/>
-                            <button type="submit" class="btn">Register</button> -->
-                        </form>
+
+    <!-- Cart items details -->
+
+    <div class="small-container cart-page">
+        <table>
+            <tr>
+                <th style="width: 100%">Account Links</th>
+            </tr>
+            <tr>
+                <td>
+                    <div style="display: flex;flex-direction:row ; justify-content: space-between; margin-top: 20px;">
+                        <h3 style=" margin-left: 120px;"><a style="font-size:25px;color: rgba(35, 157, 184, 0.998)" href="https://github.com/ravijaat2917">Github</a></h3>
+
+                        <h3 ><a style="font-size:25px;color: rgba(35, 157, 184, 0.998)" href="https://www.linkedin.com/in/ravi-lour-23b6b323b/">linkedin</a></h3>
+
+                        <h3 style="margin-right: 120px;"><a style="font-size:25px;color: rgba(35, 157, 184, 0.998)" href="https://twitter.com/ravijaat_5772">Twitter</a></h3>
                     </div>
-                </div>
-            </div>
-        </div>
+                    <br>
+                    <div style="display: flex;flex-direction:row ; justify-content: space-between;">
+                        <h4 style="margin-left: 200px;">Contact no. (+91) 8814882204</h4>
+                        <h4 style="margin-right: 200px;">Email : ravijaat2917@gmail.com</h4>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </div>
+    
     <!-- ---------- Footer ---------- -->
     <div class="footer">
         <div class="container">
@@ -117,31 +113,6 @@
                 MenuItems.style.maxHeight = "0px";
             }
         }
-    </script>
-
-    <!-- js for toggle form -->
-    <script>
-        var LF = document.getElementById("LoginForm");
-        var Rf = document.getElementById("RegForm");
-        var Indicator = document.getElementById("Indicator");
-
-        function register(){
-            LF.style.right = '8000px';
-            Rf.style.right = '0px';
-            Indicator.style.transform = 'translateX(100px)';
-            document.getElementById('RegForm').innerHTML = '<input type="text" placeholder="Username"/>'+
-                            '<input type="email" placeholder="Email"/>'+
-                            '<input type="password" placeholder="Password"/>'+
-                            '<button type="submit" class="btn">Register</button>';
-
-        }
-
-        function login(){
-            Rf.style.right = '8000px';
-            LF.style.right = '0px';
-            Indicator.style.transform = 'translateX(0px)';
-        }
-
     </script>
 </body>
 </html>
