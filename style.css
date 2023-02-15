@@ -14,6 +14,16 @@ body{
     text-overflow: ellipsis;
     width: 100%;
 }
+#colorChange{
+    animation: color-change 1s infinite;
+    font-size: larger;
+    padding-top: 3px;
+}
+@keyframes color-change {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: rgb(55, 255, 0); }
+  }
 .navbar{
     display: flex;
     align-items: center;
